@@ -1,0 +1,29 @@
+background no
+out_to_x no
+out_to_console yes
+update_interval 1
+total_run_times 0
+use_spacer none
+
+
+TEXT
+## ${if_mpd_playing}${mpd_artist}   ${mpd_title}${endif}     
+   ${downspeedf wlp1s0} | ${upspeedf wlp1s0}     \
+  ${wireless_link_qual_perc wlp1s0}  ${wireless_essid wlp1s0} (${addr wlp1s0})      \
+  ${hwmon 2 temp 1}     \
+${if_match $battery_percent > 75} \
+${else} ${if_match $battery_percent > 50} \
+${else} ${if_match $battery_percent > 25} \
+${else} ${if_match $battery_percent > 10} \
+${else} \
+$endif \
+$endif \
+$endif \
+$endif \
+$battery_time     \
+${if_match "${exec amixer get Master -c 0 -M | grep -oE "off"}"=="off"} \
+${else} \
+$endif \
+${exec amixer get Master -c 0 -M | grep -oE "[[:digit:]]*%"}     \
+  ${time %a %b %d}     \
+  ${time %H:%M}   

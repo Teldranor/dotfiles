@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/home/teld/.config'
+let g:netrw_dirhist_2='/home/teld/.config/lxterminal'
+let g:netrw_dirhist_3='/home/teld/.config'
+let g:netrw_dirhist_4='/home/teld/.config/i3'
+let g:netrw_dirhist_5='/home/teld/.config'
+let g:netrw_dirhist_6='/home/teld'
+let g:netrw_dirhist_7='/home/teld/Telecom'

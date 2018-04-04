@@ -6,3 +6,4 @@ export VISUAL=vim
 export EDITOR="$VISUAL"
 
 alias imt='ssh teldranor@telnew.imt-lille.club -p 9123'
+display -window root ~/.config/wallpaper/wallpaper.jpg
